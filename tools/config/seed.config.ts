@@ -385,6 +385,8 @@ export class SeedConfig {
       '@angular/platform-browser-dynamic/testing':
         'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
+      '@angular/material': 'node_modules/@angular/material/bundles/material.umd.js',
+      '@angular/flex-layout': 'node_modules/@angular/flex-layout/bundles/flex-layout.umd.js',
 
       'app/*': '/app/*',
       // For test config
@@ -421,8 +423,8 @@ export class SeedConfig {
       // You will have to include entries for each individual application in
       // `src/client`.
       [join(this.TMP_DIR, this.BOOTSTRAP_DIR, '*')]: `${this.TMP_DIR}/${this.BOOTSTRAP_DIR}/*`,
+      '@angular/animations/browser':'node_modules/@angular/animations/bundles/animations-browser.umd.js',
       '@angular/platform-browser/animations': 'node_modules/@angular/platform-browser/bundles/platform-browser-animations.umd.js',
-      '@angular/animations/browser': 'node_modules/@angular/animations/bundles/animations-browser.umd.js',
       'dist/tmp/node_modules/*': 'dist/tmp/node_modules/*',
       'node_modules/*': 'node_modules/*',
       '*': 'node_modules/*'
@@ -470,6 +472,14 @@ export class SeedConfig {
       },
       '@angular/service-worker': {
         main: 'bundles/service-worker.umd.js',
+        defaultExtension: 'js'
+      },
+      '@angular/flex-layout': {
+        main: 'index.js',
+        defaultExtension: 'js'
+      },
+      '@angular/material': {
+        main: 'index.js',
         defaultExtension: 'js'
       },
       'rxjs': {
